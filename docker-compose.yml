@@ -9,6 +9,8 @@ services:
     image: postgres:11.8
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
     env_file:
       - .env
   web: # django server
